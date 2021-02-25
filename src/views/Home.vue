@@ -1,8 +1,4 @@
 <template>
-  <!-- <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div> -->
   <div class="home-container">
     <div class="home-grid-container">
       <div class="image-slide-container">
@@ -18,7 +14,7 @@
 <script>
 // @ is an alias to /src
 import ImageSlide from "@/components/ImageSlide.vue";
-import ImageGallery from "@/components/ImageGallery";
+import ImageGallery from "@/components/ImageGallery.vue";
 
 export default {
   name: "Home",
