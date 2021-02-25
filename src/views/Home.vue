@@ -1,18 +1,43 @@
 <template>
-  <div class="home">
+  <!-- <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+  </div> -->
+  <div class="home-container">
+    <div class="home-grid-container">
+      <div class="image-slide-container">
+        <ImageSlide class="imageslide" />
+      </div>
+      <div class="image-gallery">
+        <ImageGallery />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import ImageSlide from "@/components/ImageSlide.vue";
+import ImageGallery from "@/components/ImageGallery";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
+  components: { ImageSlide, ImageGallery },
 };
 </script>
+
+<style scoped>
+.home-container {
+  background-color: #ebebeb;
+}
+.home-grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.image-slide-container {
+  grid-row: 1 / span 1;
+}
+.image-gallery {
+  grid-row: 2 / span 1;
+}
+</style>
