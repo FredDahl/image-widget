@@ -44,6 +44,8 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+.gallery-item-container {
+}
 .gallery-item {
   display: flex;
   flex-direction: column;

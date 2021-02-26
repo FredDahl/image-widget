@@ -123,59 +123,57 @@ import GalleryItem from "@/components/GalleryItem.vue";
 export default {
   name: "ImageGallery",
   components: {
-    GalleryItem
+    GalleryItem,
   },
   data() {
     return {
-      pageview: 1
+      pageview: 1,
     };
   },
   methods: {
-      btnhandler(e) {
-          this.pageview = e;
-      } 
-  },
-    watch: {
-      pageview: function(val) {
-        switch (val) {
-          case 0:
-            this.pageview = 6;
-            break;
-          case 1:
-            this.pageview = 1;
-            break;
-          case 2:
-            this.pageview = 2;
-            break;
-          case 3:
-            this.pageview = 3;
-            break;
-          case 4:
-            this.pageview = 4;
-            break;
-          case 5:
-            this.pageview = 5;
-            break;
-          case 6:
-            this.pageview = 6;
-            break;
-          case 7:
-            this.pageview = 1;
-            break;
-        }
-      },
+    btnhandler(e) {
+      this.pageview = e;
     },
+  },
+  watch: {
+    pageview: function(val) {
+      switch (val) {
+        case 0:
+          this.pageview = 6;
+          break;
+        case 1:
+          this.pageview = 1;
+          break;
+        case 2:
+          this.pageview = 2;
+          break;
+        case 3:
+          this.pageview = 3;
+          break;
+        case 4:
+          this.pageview = 4;
+          break;
+        case 5:
+          this.pageview = 5;
+          break;
+        case 6:
+          this.pageview = 6;
+          break;
+        case 7:
+          this.pageview = 1;
+          break;
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
 .image-gallery-container {
-  height: 100%;
   display: grid;
   grid-template-columns: 0.1fr 1fr 0.1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1em;
-  padding: 0 0 0 0;
   background-color: #ebebeb;
 }
 .gallery-item-1 {

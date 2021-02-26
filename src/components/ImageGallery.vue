@@ -140,13 +140,13 @@ export default {
 
 <style scoped>
 .image-gallery-container {
-  height: 100%;
+  height: 100vh;
+  background-color: #ebebeb;
   display: grid;
   grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1em;
   padding: 10px 0 10px 0;
-  background-color: #ebebeb;
 }
 .gallery-item-1 {
   grid-column: 2 / span 1;
@@ -187,7 +187,7 @@ export default {
   font-size: 3.2vw;
   transform: scaleY(2);
   transform-origin: 0 0;
-  color: #DCDCDC;
+  color: #dcdcdc;
 }
 .btn-style:hover {
   border: 1px solid black;

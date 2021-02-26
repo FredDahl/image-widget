@@ -49,6 +49,8 @@ export default {
 .home-grid-container {
   display: grid;
   grid-template-rows: 1fr 2fr;
+  padding-bottom: 80px;
+  background-color: #ebebeb;
 }
 .image-slide-container {
   grid-row: 1 / span 1;
