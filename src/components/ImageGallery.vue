@@ -5,36 +5,42 @@
       title="Gallery Item 1"
       route="/about"
       imageName="galleryimg01.jpg"
+      likes="546"
     />
     <GalleryItem
       class="gallery-item"
       title="Gallery Item 2"
       route="/about"
       imageName="galleryimg02.jpg"
+      likes="496"
     />
     <GalleryItem
       class="gallery-item"
       title="Gallery Item 3"
       route="/about"
       imageName="galleryimg03.jpg"
+      likes="723"
     />
     <GalleryItem
       class="gallery-item"
       title="Gallery Item 4"
       route="/about"
       imageName="galleryimg04.jpg"
+      likes="248"
     />
     <GalleryItem
       class="gallery-item"
       title="Gallery Item 5"
       route="/about"
       imageName="galleryimg05.jpg"
+      likes="539"
     />
     <GalleryItem
       class="gallery-item"
       title="Gallery Item 6"
       route="/about"
       imageName="galleryimg06.jpg"
+      likes="423"
     />
   </div>
 </template>
