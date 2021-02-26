@@ -1,11 +1,41 @@
 /<template>
   <div class="image-gallery-container">
-    <GalleryItem class="gallery-item-1" title="Gallery Item 1" route="/about" />
-    <GalleryItem class="gallery-item-2" title="Gallery Item 2" route="/about" />
-    <GalleryItem class="gallery-item-3" title="Gallery Item 3" route="/about" />
-    <GalleryItem class="gallery-item-4" title="Gallery Item 4" route="/about" />
-    <GalleryItem class="gallery-item-5" title="Gallery Item 5" route="/about" />
-    <GalleryItem class="gallery-item-6" title="Gallery Item 6" route="/about" />
+    <GalleryItem
+      class="gallery-item"
+      title="Gallery Item 1"
+      route="/about"
+      imageName="galleryimg01.jpg"
+    />
+    <GalleryItem
+      class="gallery-item"
+      title="Gallery Item 2"
+      route="/about"
+      imageName="galleryimg02.jpg"
+    />
+    <GalleryItem
+      class="gallery-item"
+      title="Gallery Item 3"
+      route="/about"
+      imageName="galleryimg03.jpg"
+    />
+    <GalleryItem
+      class="gallery-item"
+      title="Gallery Item 4"
+      route="/about"
+      imageName="galleryimg04.jpg"
+    />
+    <GalleryItem
+      class="gallery-item"
+      title="Gallery Item 5"
+      route="/about"
+      imageName="galleryimg05.jpg"
+    />
+    <GalleryItem
+      class="gallery-item"
+      title="Gallery Item 6"
+      route="/about"
+      imageName="galleryimg06.jpg"
+    />
   </div>
 </template>
 
@@ -17,6 +47,12 @@ export default {
   components: {
     GalleryItem,
   },
+  data() {
+    return {
+      parentDivSize: Number,
+    };
+  },
+  computed: {},
 };
 </script>
 
@@ -26,6 +62,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  padding: 0 20px 0 20px;
 }
 .gallery-item-1 {
   grid-column: 1 / span 1;

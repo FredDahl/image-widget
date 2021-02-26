@@ -4,7 +4,7 @@
       <div class="image-slide-container">
         <ImageSlide class="imageslide" />
       </div>
-      <div class="image-gallery">
+      <div class="image-gallery-container">
         <ImageGallery />
       </div>
     </div>
@@ -28,12 +28,12 @@ export default {
 }
 .home-grid-container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
 }
 .image-slide-container {
   grid-row: 1 / span 1;
 }
-.image-gallery {
+.image-gallery-container {
   grid-row: 2 / span 1;
 }
 </style>

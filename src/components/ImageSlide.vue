@@ -26,17 +26,17 @@ export default {
       {
         title: "",
         content: "",
-        image: require("@/assets/images/img01.jpg"),
+        image: require("@/assets/images/covers/img01.jpg"),
       },
       {
         title: "",
         content: "",
-        image: require("@/assets/images/img02.jpg"),
+        image: require("@/assets/images/covers/img02.jpg"),
       },
       {
         title: "",
         content: "",
-        image: require("@/assets/images/img03.jpg"),
+        image: require("@/assets/images/covers/img03.jpg"),
       },
     ],
   }),

@@ -3,6 +3,7 @@
     <router-link :to="this.route">
       <div class="gallery-item">
         <div class="">{{ title }}</div>
+        <img :src="require('@/assets/images/gallery/' + imageName + '')" />
       </div>
     </router-link>
   </div>
@@ -14,12 +15,17 @@ export default {
   props: {
     title: String,
     route: String,
+    imageName: String,
   },
 };
 </script>
 
 <style scope>
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
 .gallery-item-container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 </style>
