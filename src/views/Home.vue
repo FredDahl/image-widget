@@ -1,5 +1,6 @@
 <template>
   <div class="home-container">
+    <ScreenSizeCalc />
     <div class="home-grid-container">
       <div class="image-slide-container">
         <ImageSlide class="imageslide" />
@@ -13,17 +14,30 @@
 
 <script>
 // @ is an alias to /src
+import ScreenSizeCalc from "@/components/ScreenSizeCalc.vue";
 import ImageSlide from "@/components/ImageSlide.vue";
 import ImageGallery from "@/components/ImageGallery.vue";
 
+import { mapGetters } from "vuex";
+
 export default {
   name: "Home",
-  components: { ImageSlide, ImageGallery },
+  components: { ScreenSizeCalc, ImageSlide, ImageGallery },
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(["getIsSmallDevice"]),
+  },
+  mounted() {
+    console.log(this.getIsSmallDevice);
+  },
 };
 </script>
 
 <style scoped>
 .home-container {
+  height: 100vh;
   background-color: #ebebeb;
 }
 .home-grid-container {

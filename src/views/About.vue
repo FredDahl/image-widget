@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .about-container {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
