@@ -1,12 +1,13 @@
 /<template>
   <div class="image-gallery-container">
-    <button class="btn-style btn-right">
+    <button v-on:click="btnhandler(!pageview)" class="btn-style btn-right">
       <p>&#62;</p>
     </button>
-    <button class="btn-style btn-left">
+    <button v-on:click="btnhandler(!pageview)" class="btn-style btn-left">
       <p>&#60;</p>
     </button>
     <GalleryItem
+      v-if="pageview == true"
       class="gallery-item-1"
       title="Gallery Item 1"
       route="/about"
@@ -15,6 +16,7 @@
       description="Motorbåt"
     />
     <GalleryItem
+      v-if="pageview == true"
       class="gallery-item-2"
       title="Gallery Item 2"
       route="/about"
@@ -23,6 +25,7 @@
       description="Segelbåt"
     />
     <GalleryItem
+      v-if="pageview == true"
       class="gallery-item-3"
       title="Gallery Item 3"
       route="/about"
@@ -31,6 +34,7 @@
       description="Segelbåt"
     />
     <GalleryItem
+      v-if="pageview == true"
       class="gallery-item-4"
       title="Gallery Item 4"
       route="/about"
@@ -39,6 +43,7 @@
       description="Motorbåt"
     />
     <GalleryItem
+      v-if="pageview == true"
       class="gallery-item-5"
       title="Gallery Item 5"
       route="/about"
@@ -47,11 +52,66 @@
       description="Segelbåt"
     />
     <GalleryItem
+      v-if="pageview == true"
       class="gallery-item-6"
       title="Gallery Item 6"
       route="/about"
       imageName="galleryimg06.jpg"
       likes="423"
+      description="Motorbåt"
+    />
+    <GalleryItem
+      v-if="pageview == false"
+      class="gallery-item-1"
+      title="Gallery Item 7"
+      route="/about"
+      imageName="galleryimg07.jpg"
+      likes="736"
+      description="Motorbåt"
+    />
+    <GalleryItem
+      v-if="pageview == false"
+      class="gallery-item-2"
+      title="Gallery Item 8"
+      route="/about"
+      imageName="galleryimg08.jpg"
+      likes="596"
+      description="Segelbåt"
+    />
+    <GalleryItem
+      v-if="pageview == false"
+      class="gallery-item-3"
+      title="Gallery Item 9"
+      route="/about"
+      imageName="galleryimg09.jpg"
+      likes="723"
+      description="Segelbåt"
+    />
+    <GalleryItem
+      v-if="pageview == false"
+      class="gallery-item-4"
+      title="Gallery Item 10"
+      route="/about"
+      imageName="galleryimg10.jpg"
+      likes="687"
+      description="Motorbåt"
+    />
+    <GalleryItem
+      v-if="pageview == false"
+      class="gallery-item-5"
+      title="Gallery Item 11"
+      route="/about"
+      imageName="galleryimg11.jpg"
+      likes="423"
+      description="Motorbåt"
+    />
+    <GalleryItem
+      v-if="pageview == false"
+      class="gallery-item-6"
+      title="Gallery Item 12"
+      route="/about"
+      imageName="galleryimg12.jpg"
+      likes="742"
       description="Motorbåt"
     />
   </div>
@@ -67,10 +127,14 @@ export default {
   },
   data() {
     return {
-      // parentDivSize: Number,
+      pageview: true,
     };
   },
-  computed: {},
+  methods: {
+    btnhandler(e) {
+      this.pageview = e;
+    },
+  },
 };
 </script>
 
@@ -123,6 +187,7 @@ export default {
   font-size: 3.2vw;
   transform: scaleY(2);
   transform-origin: 0 0;
+  color: #DCDCDC;
 }
 .btn-style:hover {
   border: 1px solid black;

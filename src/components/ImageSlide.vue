@@ -47,8 +47,4 @@ export default {
 .vueper-container {
   background-color: #ebebeb;
 }
-/*  // fixed-height="true" */
-/* .vueperslides--fixed-height {
-  height: 50vh;
-} */
 </style>
