@@ -6,7 +6,12 @@
         <ImageSlide class="imageslide" />
       </div>
       <div class="image-gallery-container">
-        <ImageGallery />
+        <div :class="{ hidden: this.getIsSmallDevice }">
+          <ImageGallery />
+        </div>
+        <div :class="{ hidden: !this.getIsSmallDevice }">
+          <MobileImageGallery />
+        </div>
       </div>
     </div>
   </div>
@@ -17,12 +22,13 @@
 import ScreenSizeCalc from "@/components/ScreenSizeCalc.vue";
 import ImageSlide from "@/components/ImageSlide.vue";
 import ImageGallery from "@/components/ImageGallery.vue";
+import MobileImageGallery from "@/components/MobileImageGallery.vue";
 
 import { mapGetters } from "vuex";
 
 export default {
   name: "Home",
-  components: { ScreenSizeCalc, ImageSlide, ImageGallery },
+  components: { ScreenSizeCalc, ImageSlide, ImageGallery, MobileImageGallery },
   data() {
     return {};
   },
@@ -49,5 +55,8 @@ export default {
 }
 .image-gallery-container {
   grid-row: 2 / span 1;
+}
+.hidden {
+  display: none !important;
 }
 </style>
