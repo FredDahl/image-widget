@@ -158,9 +158,9 @@
       </div>
       <div class="footer-text" :class="{ hidden: this.getIsSmallDevice }">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod at quas
-          est natus eum aliquam, quis nisi voluptatum odit nostrum?
+          This is an images gallery demo page.
         </p>
+        <p>&#169; Fredrik Dahlström 2001</p>
       </div>
     </div>
   </div>
@@ -183,9 +183,6 @@ export default {
   },
   computed: {
     ...mapGetters(["getIsSmallDevice"]),
-  },
-  mounted() {
-    console.log(this.getIsSmallDevice);
   },
 };
 </script>
@@ -227,12 +224,12 @@ export default {
   flex-direction: row;
 }
 .footer-icon {
-  transform: scale(0.75);
+  transform: scale(0.5);
 }
 .footer-text p {
   max-width: 500px;
   color: white;
-  padding-top: 20px;
+  padding-top: 60px;
 }
 .mobilefooter {
   background-color: #ebebeb;

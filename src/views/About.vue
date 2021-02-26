@@ -1,6 +1,8 @@
 <template>
   <div class="about-container">
-    <h1>This is an demo image widget page</h1>
+    <h1>This is an image gallery demo page</h1>
+    <p> Here could product information and similar be displayed in a future version of this site.</p>
+    <p> At the present time so is this a placeholder area.</p>
     <BackButton class="back-button" route="./" />
   </div>
 </template>
