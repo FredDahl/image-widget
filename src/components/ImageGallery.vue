@@ -6,6 +6,7 @@
       route="/about"
       imageName="galleryimg01.jpg"
       likes="546"
+      description="Motorbåt"
     />
     <GalleryItem
       class="gallery-item"
@@ -13,6 +14,7 @@
       route="/about"
       imageName="galleryimg02.jpg"
       likes="496"
+      description="Segelbåt"
     />
     <GalleryItem
       class="gallery-item"
@@ -20,6 +22,7 @@
       route="/about"
       imageName="galleryimg03.jpg"
       likes="723"
+      description="Segelbåt"
     />
     <GalleryItem
       class="gallery-item"
@@ -27,6 +30,7 @@
       route="/about"
       imageName="galleryimg04.jpg"
       likes="248"
+      description="Motorbåt"
     />
     <GalleryItem
       class="gallery-item"
@@ -34,6 +38,7 @@
       route="/about"
       imageName="galleryimg05.jpg"
       likes="539"
+      description="Segelbåt"
     />
     <GalleryItem
       class="gallery-item"
@@ -41,6 +46,7 @@
       route="/about"
       imageName="galleryimg06.jpg"
       likes="423"
+      description="Motorbåt"
     />
   </div>
 </template>

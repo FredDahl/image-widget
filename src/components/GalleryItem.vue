@@ -2,10 +2,13 @@
   <div class="gallery-item-container">
     <router-link :to="this.route">
       <div class="gallery-item">
-        <div class="">{{ title }}</div>
+        <div class="title">{{ title }}</div>
         <img :src="require('@/assets/images/gallery/' + imageName + '')" />
         <div class="overlay">
-          <div class="text">&#9825; {{ likes }}</div>
+          <div class="text-container">
+            <div>&#9825; {{ likes }}</div>
+            <div class="">{{ description }}</div>
+          </div>
         </div>
       </div>
     </router-link>
@@ -25,6 +28,7 @@ export default {
     route: String,
     imageName: String,
     likes: Number,
+    description: String,
   },
 };
 </script>
@@ -60,10 +64,16 @@ img {
   opacity: 1;
 }
 
-.text {
-  position: absolute;
-  bottom: 50%; 
-  width: 100%;
+.text-container {
+  height: 100%;
   color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.title {
+  color: black;
+  padding: 8px;
+  font-size: 14px;
 }
 </style>
