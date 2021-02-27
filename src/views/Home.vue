@@ -160,7 +160,7 @@
         <p>
           This is an images gallery demo page.
         </p>
-        <p>&#169; Fredrik Dahlström 2001</p>
+        <p>&#169; Fredrik Dahlström 2021</p>
       </div>
     </div>
   </div>
