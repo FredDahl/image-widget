@@ -35,7 +35,7 @@ a:hover {
   color: #42b983;
 }
 .imageview-container {
-  height: 100vh;
+  height: 100%;
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;

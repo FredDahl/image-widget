@@ -40,7 +40,8 @@ a:hover {
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
-}
+  padding: 20px;
+  }
 .back-button {
   padding-top: 50px;
 }
