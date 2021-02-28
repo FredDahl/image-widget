@@ -3,7 +3,7 @@
     <div>
       <img :src="require('@/assets/images/gallery/' + getSelectedImage)" />
     </div>
-    <p> You have selected {{ getSelectedImage }} </p>
+    <p>You have selected {{ getSelectedImage }}</p>
     <BackButton class="back-button" route="./" />
   </div>
 </template>
@@ -16,8 +16,15 @@ export default {
   name: "ImageView",
   components: { BackButton },
   computed: {
-    ...mapGetters(["getSelectedImage"])
-  }
+    ...mapGetters(["getSelectedImage"]),
+  },
+  mounted() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  },
 };
 </script>
 
@@ -35,7 +42,7 @@ a:hover {
   color: #42b983;
 }
 .imageview-container {
-  height: 100%;
+  height: 100vh;
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
