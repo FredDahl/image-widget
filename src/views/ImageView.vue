@@ -1,24 +1,23 @@
 <template>
-  <div class="about-container">
-    <h1>This is an image gallery demo page</h1>
-    <p>
-      Here could product information and similar be displayed in a future
-      version of this site.
-    </p>
-    <p>At the present time so is this a placeholder area.</p>
-    <p>This project is made public on GitHub:</p>
-    <a href="https://github.com/FredDahl/image-widget" target="_blank"
-      >GitHub repo for Image Widget</a
-    >
+  <div class="imageview-container">
+    <div>
+      <img :src="require('@/assets/images/gallery/' + getSelectedImage)" />
+    </div>
+    <p> You have selected {{ getSelectedImage }} </p>
     <BackButton class="back-button" route="./" />
   </div>
 </template>
 
 <script>
 import BackButton from "@/components/BackButton.vue";
+import { mapGetters } from "vuex";
+
 export default {
-  name: "About",
+  name: "ImageView",
   components: { BackButton },
+  computed: {
+    ...mapGetters(["getSelectedImage"])
+  }
 };
 </script>
 
@@ -35,11 +34,12 @@ a:visited {
 a:hover {
   color: #42b983;
 }
-.about-container {
+.imageview-container {
   height: 100vh;
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 .back-button {
   padding-top: 50px;

@@ -1,8 +1,8 @@
 /<template>
   <div>
-    <div class="vueper-container">
+    <div class="vueper-container imageslidesmall">
       <div class="vueper-inner-container">
-        <vueper-slides :slide-ratio="1 / 4" autoplay bullets-outside>
+        <vueper-slides :slide-ratio="1 / 4" autoplay :bullets="false">
           <vueper-slide
             slide-image-inside
             v-for="(slide, i) in slides"
@@ -20,7 +20,7 @@ import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 
 export default {
-  name: "ImageSlide",
+  name: "MobileImageSlide",
   components: { VueperSlides, VueperSlide },
   data: () => ({
     // slidesTimeTimerId: null,
@@ -47,8 +47,11 @@ export default {
 
 <style scoped>
 .vueper-container {
-  max-width: 92%;
+  max-width: 78%;
   margin: auto;
   background-color: #ebebeb;
+}
+.imageslidesmall {
+  padding-top: 20px;
 }
 </style>

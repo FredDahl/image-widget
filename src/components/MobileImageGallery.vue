@@ -199,7 +199,6 @@ export default {
   font-size: 3.2vw;
   transform: scaleY(2);
   transform-origin: 0 0;
-  color: #dcdcdc;
 }
 .btn-style:hover {
   border: 1px solid black;

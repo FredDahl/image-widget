@@ -3,7 +3,8 @@
     <ScreenSizeCalc />
     <div class="home-grid-container">
       <div class="image-slide-container">
-        <ImageSlide class="image-slide" />
+        <ImageSlide class="image-slide" :class="{ hidden: this.getIsSmallDevice}" />
+        <MobileImageSlide class="image-slide" :class="{ hidden: !this.getIsSmallDevice }" />
       </div>
       <div class="image-gallery-container">
         <div :class="{ hidden: this.getIsSmallDevice }">
@@ -170,6 +171,7 @@
 // @ is an alias to /src
 import ScreenSizeCalc from "@/components/ScreenSizeCalc.vue";
 import ImageSlide from "@/components/ImageSlide.vue";
+import MobileImageSlide from "@/components/MobileImageSlide.vue"
 import ImageGallery from "@/components/ImageGallery.vue";
 import MobileImageGallery from "@/components/MobileImageGallery.vue";
 
@@ -177,7 +179,7 @@ import { mapGetters } from "vuex";
 
 export default {
   name: "Home",
-  components: { ScreenSizeCalc, ImageSlide, ImageGallery, MobileImageGallery },
+  components: { ScreenSizeCalc, ImageSlide, MobileImageSlide, ImageGallery, MobileImageGallery },
   data() {
     return {};
   },
@@ -194,7 +196,7 @@ export default {
 }
 .home-grid-container {
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 0.5fr 2fr;
   background-color: #ebebeb;
 }
 .image-slide-container {

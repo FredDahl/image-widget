@@ -1,6 +1,9 @@
 <template>
-  <div class="gallery-item-container">
-    <router-link :to="this.route">
+  <div
+    class="gallery-item-container"
+    v-on:click="setSelectedImage(imageName)"
+  >
+    <router-link to="/imageview">
       <div class="gallery-item">
         <img :src="require('@/assets/images/gallery/' + imageName + '')" />
         <div class="overlay">
@@ -16,12 +19,12 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   name: "GalleryItem",
   data() {
-    return {
-      count: 0,
-    };
+    return {};
   },
   props: {
     title: String,
@@ -29,6 +32,9 @@ export default {
     imageName: String,
     likes: String,
     description: String,
+  },
+  methods: {
+    ...mapMutations(["setSelectedImage"]),
   },
 };
 </script>

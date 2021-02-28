@@ -49,7 +49,7 @@ export default {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  transform: translate(208px);
+  transform: translate(0px, 75px);
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
